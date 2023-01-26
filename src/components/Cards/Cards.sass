@@ -1,3 +1,41 @@
+@mixin flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+    
+    
 .container
+    padding: 8vh 5vw
     display: grid
     grid-template-columns: 1fr 1fr 1fr
+    row-gap: 4%
+    column-gap: 4%
+    .card
+        background-color: #fff
+        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%)
+        border-radius: 1rem
+        transition: .3s ease-in-out
+        .imgContainer
+            @include flex-center
+            img
+                width: 70%
+                margin-top: -2rem
+                aspect-ratio: 1/1
+                border-radius: 1rem
+                box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%)
+                transition: .3s ease-in-out
+        .infoContainer
+            @include flex-center
+            flex-direction: column
+            padding: 1rem 0
+            h3
+                margin: 1rem 0
+                text-align: center
+        &:hover
+            box-shadow: 0 4px 17px 2px rgb(0 0 0 / 20%)
+            cursor: pointer
+            .imgContainer
+                img
+                    transform: scale(1.1)
+            
+
