@@ -1,6 +1,6 @@
 import React from "react";
 
-const Status = ({ setStatus, setPageNumber }) => {
+const Status = ({ setStatus, setPageNumber, statusState, setStatusState }) => {
     return (
         <div>
             <select
@@ -9,9 +9,11 @@ const Status = ({ setStatus, setPageNumber }) => {
                 onChange={(e) => {
                     setPageNumber(1);
                     setStatus(e.target.value);
+                    setStatusState(e.target.value);
                 }}
+                value={statusState}
             >
-                <option value selected disabled>
+                <option value="" disabled>
                     Filer by status
                 </option>
                 <option value="Alive">Alive</option>

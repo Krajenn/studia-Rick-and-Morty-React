@@ -1,6 +1,6 @@
 import React from "react";
 
-const Gender = ({ setPageNumber, setGender }) => {
+const Gender = ({ setPageNumber, setGender, genderState, setGenderState }) => {
     return (
         <div>
             <select
@@ -9,9 +9,11 @@ const Gender = ({ setPageNumber, setGender }) => {
                 onChange={(e) => {
                     setPageNumber(1);
                     setGender(e.target.value);
+                    setGenderState(e.target.value);
                 }}
+                value={genderState}
             >
-                <option value selected disabled>
+                <option value="" disabled>
                     Filter by gender
                 </option>
                 <option value="male">Male</option>

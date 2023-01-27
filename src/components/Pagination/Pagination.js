@@ -16,6 +16,8 @@ const Pagination = ({ info, setPageNumber, pageNumber }) => {
             pageLinkClassName={style.pageLink}
             activeClassName={style.active}
             forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
+            marginPagesDisplayed={1}
+            pageRangeDisplayed={1}
         />
     );
 };

@@ -1,0 +1,34 @@
+.container
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-left: 5vw
+    .filter
+        font-size: 1.5rem
+    div
+        width: 100%
+        text-align: center
+        margin-top: 8%
+        select
+            width: 100%
+            padding: 10px 20px
+            border-right: 20px solid #fff
+            border-left: none
+            border-top: none
+            border-bottom: none
+            border-radius: 0.5rem
+            box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%)
+            &:focus
+                outline: 1px solid #34353F
+    .clear
+        cursor: pointer
+        text-decoration: underline
+
+@media screen and (max-width: 768px)
+    .container
+        grid-column: 1 / span 2
+        padding-right: 5vw
+        div
+            margin-top: 2%
+            width: 80%
+        

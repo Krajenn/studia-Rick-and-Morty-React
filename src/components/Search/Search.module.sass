@@ -1,11 +1,16 @@
 .container
     display: flex
+    flex-direction: row
+    flex-wrap: nowrap
     justify-content: center
     align-items: center
     grid-column: 1 / span 2
-    margin: 2vh 0
+    margin: 2vh auto
     height: 10vh
+    padding: 0 5vw
+    width: 60%
     input
+        width: 70%
         height: 80%
         padding: 1rem
         font-size: 1rem
@@ -16,10 +21,11 @@
         border-top: 1px solid #FFF
         border-bottom: 1px solid #FFF
         &:focus
-           border-left: 1px solid #34353F
-           border-top: 1px solid #34353F
-           border-bottom: 1px solid #34353F
+        border-left: 1px solid #34353F
+        border-top: 1px solid #34353F
+        border-bottom: 1px solid #34353F
     button
+        width: 30%
         height: 80%
         padding: 1rem
         font-size: 1rem
@@ -28,10 +34,22 @@
         outline: none
         border-radius: 0 0.5rem 0.5rem 0
         border: none
+        overflow: hidden
         &:hover
             cursor: pointer
+
+@media screen and (max-width: 768px)
+    .container
+        width: 80%
+        input
+            width: 60%
+        button
+            width: 40%
+        
 
 @media screen and (max-width: 400px)
     .container
         height: 12vh
+        width: 70%
+        
     

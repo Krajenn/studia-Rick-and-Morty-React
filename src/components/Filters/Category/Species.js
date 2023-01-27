@@ -1,6 +1,11 @@
 import React from "react";
 
-const Species = ({ setPageNumber, setSpecies }) => {
+const Species = ({
+    setPageNumber,
+    setSpecies,
+    speciesState,
+    setSpeciesState,
+}) => {
     let species = [
         "Alien",
         "Animal",
@@ -22,9 +27,11 @@ const Species = ({ setPageNumber, setSpecies }) => {
                 onChange={(e) => {
                     setPageNumber(1);
                     setSpecies(e.target.value);
+                    setSpeciesState(e.target.value);
                 }}
+                value={speciesState}
             >
-                <option selected disabled>
+                <option value="" disabled>
                     Filter by species
                 </option>
                 {species.map((item, index) => (
