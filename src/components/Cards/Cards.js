@@ -1,23 +1,28 @@
 import React from "react";
-import "./Cards.sass";
+import styles from "./Cards.module.sass";
 
 const Cards = ({ results }) => {
     let display;
-    console.log(results);
 
     if (results) {
         display = results.map((result) => {
             let { id, name, species, status, gender, image } = result;
             return (
-                <div key={id} className="card">
-                    <div className="imgContainer">
+                <div key={id} className={styles.card}>
+                    <div className={styles.imgContainer}>
                         <img src={image} alt={name} />
                     </div>
-                    <div className="infoContainer">
+                    <div className={styles.infoContainer}>
                         <h3>{name}</h3>
-                        <p>Species: {species}</p>
-                        <p>Status: {status}</p>
-                        <p>Gender: {gender}</p>
+                        <p>
+                            <span>Species:</span> {species}
+                        </p>
+                        <p>
+                            <span>Status:</span> {status}
+                        </p>
+                        <p>
+                            <span>Gender:</span> {gender}
+                        </p>
                     </div>
                 </div>
             );
@@ -26,7 +31,7 @@ const Cards = ({ results }) => {
         return (display = "No results found.");
     }
 
-    return <div className="container">{display}</div>;
+    return <div className={styles.container}>{display}</div>;
 };
 
 export default Cards;

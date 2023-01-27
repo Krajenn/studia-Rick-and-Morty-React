@@ -1,0 +1,43 @@
+.container
+    display: flex
+    justify-content: center
+    align-items: center
+    grid-column: 1 / span 2
+    // gap: 5%
+    list-style: none
+    margin-bottom: 5vh
+    .prev, .next
+        background-color: #34353F
+        color: white
+        cursor: pointer
+        border-radius: 0.5rem
+        border: 1px solid #34353F
+        transition: .2s ease-in-out
+        a
+            height: 100%
+            width: 100%
+            padding: 10px
+            display: block
+        &:hover
+            background-color: #fff
+            color: #34353F
+            border: 1px solid #34353F
+.page
+    margin: 0 1vw
+    .pageLink
+        padding: 10px
+        cursor: pointer
+        height: 100%
+        width: 100%
+        border: 1px solid #34353F
+        border-radius: 0.5rem
+        
+.active
+    .pageLink
+        background-color: #34353F
+        color: #fff
+    
+
+   
+    
+    
