@@ -44,6 +44,11 @@ const Home = () => {
                 <header
                     onClick={() => {
                         setPageNumber(1);
+                        setSearch("");
+                        setSpecies("");
+                        setStatus("");
+                        setGender("");
+                        setValue("");
                     }}
                 >
                     <Link to="/">
